@@ -127,7 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="IOCompletionPort.h" />
+    <ClInclude Include="EchoServer.h" />
+    <ClInclude Include="IOCPServer.h" />
     <ClInclude Include="Define.h" />
   </ItemGroup>
   <ItemGroup>

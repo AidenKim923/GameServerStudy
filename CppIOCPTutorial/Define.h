@@ -24,6 +24,7 @@ struct stOverlappedEx
 // 클라이언트 정보를 담기 위한 구조체
 struct stClientInfo
 {
+	INT32			m_Index;			// 클라이언트 인덱스
 	SOCKET			m_socketClient;		// 클라이언트와 연결되는 소켓
 	stOverlappedEx	m_stRecvOverlappedEx; // Recv Overlapped I/O 변수
 	stOverlappedEx	m_stSendOverlappedEx; // Send Overlapped I/O 변수
