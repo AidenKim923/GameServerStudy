@@ -128,6 +128,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="IOCompletionPort.h" />
+    <ClInclude Include="Define.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
