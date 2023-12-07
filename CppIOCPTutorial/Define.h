@@ -1,11 +1,12 @@
 #pragma once
 
-#include <WinSock2.h>
-#include <WS2tcpip.h>
+#include <winsock2.h>
+#include <Ws2tcpip.h>
 
-const UINT32 MAX_SOCKBUF		= 256; // ¼ÒÄÏ ¹öÆÛÀÇ Å©±â
-const UINT32 MAX_SOCK_SENDBUF	= 4096; // ¼ÒÄÏ ¹öÆÛÀÇ Å©±â
-const UINT32 MAX_WORKERTHREAD	= 4; // ¾²·¹µå Ç®¿¡ ³ÖÀ» ¾²·¹µå ¼ö
+const UINT32 MAX_SOCKBUF = 256;	// ì†Œì¼“ ë²„í¼ì˜ í¬ê¸°
+const UINT32 MAX_SOCK_SENDBUF = 4096;	// ì†Œì¼“ ë²„í¼ì˜ í¬ê¸°
+const UINT32 MAX_WORKERTHREAD = 4;  //ì“°ë ˆë“œ í’€ì— ë„£ì„ ì“°ë ˆë“œ ìˆ˜
+
 
 enum class IOOperation
 {
@@ -13,12 +14,11 @@ enum class IOOperation
 	SEND
 };
 
-// WSAOVERLAPPED ±¸Á¶Ã¼¸¦ È®Àå ½ÃÄÑ¼­ ÇÊ¿äÇÑ Á¤º¸¸¦ ´õ ³Ö¾ú´Ù.
+//WSAOVERLAPPEDêµ¬ì¡°ì²´ë¥¼ í™•ì¥ ì‹œì¼œì„œ í•„ìš”í•œ ì •ë³´ë¥¼ ë” ë„£ì—ˆë‹¤.
 struct stOverlappedEx
 {
-	WSAOVERLAPPED	m_wsaOverlapped;		// Overlapped I/O ±¸Á¶Ã¼
-	SOCKET			m_socketClient;						// ¼ÒÄÏ
-	WSABUF 			m_wsaBuf;				// Overlapped I/O ÀÛ¾÷ ¹öÆÛ
-	IOOperation 	m_eOperation;			// Overlapped I/O ÀÛ¾÷ µ¿ÀÛ Á¾·ù
+	WSAOVERLAPPED m_wsaOverlapped;		//Overlapped I/Oêµ¬ì¡°ì²´
+	SOCKET		m_socketClient;			//í´ë¼ì´ì–¸íŠ¸ ì†Œì¼“
+	WSABUF		m_wsaBuf;				//Overlapped I/Oì‘ì—… ë²„í¼
+	IOOperation m_eOperation;			//ì‘ì—… ë™ì‘ ì¢…ë¥˜
 };
-
